@@ -41,7 +41,7 @@ sig = sigmoid(X * theta);
 J = 1 / m * sum( -y.* log(sig) - (1.- y).* log(1.- sig) ) + lambda / (2 * m) * sum(theta(2:end).^2); 
 
 temp_theta = lambda / m * theta(2:end);
-grad(2:end) = temp_theta(:)
+grad(2:end) = temp_theta(:);
 grad = 1 / m * X' * (sig - y) + grad;
 
 
